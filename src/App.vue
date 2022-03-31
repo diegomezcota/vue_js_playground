@@ -58,9 +58,9 @@ export default {
           {{ act }}
         </li>
       </ul>
-      <div class="centered" v-if="perrito_range > gatito_range">Te gustan más los perritos!</div>
-      <div class="centered" v-if="perrito_range < gatito_range">Te gustan más los gatitos!</div>
-      <div class="centered" v-if="perrito_range == gatito_range">Te gustan igual los perritos y gatitos!</div>
+      <div class="centered" v-if="parseInt(perrito_range) > parseInt(gatito_range)">Te gustan más los perritos!</div>
+      <div class="centered" v-if="parseInt(perrito_range) < parseInt(gatito_range)">Te gustan más los gatitos!</div>
+      <div class="centered" v-if="parseInt(perrito_range) == parseInt(gatito_range)">Te gustan igual los perritos y gatitos!</div>
       <h2>¿Qué tanto te gustan los perritos?</h2>
       <div class="slidecontainer">
         <input type="range" min="1" max="100" class="slider" id="perrito-range" v-model="perrito_range">
